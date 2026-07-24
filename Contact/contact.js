@@ -20,10 +20,11 @@ document.addEventListener('DOMContentLoaded', function(){
 		let valid = true;
 		const name = form.name;
 		const email = form.email;
+		const subject = form.subject;
 		const message = form.message;
 
 		// reset
-		[name,email,message].forEach(i=>showError(i,''));
+		[name,email,subject,message].forEach(i=>showError(i,''));
 
 		if(!name.value.trim()){
 			showError(name,'Please enter your name');
@@ -40,18 +41,38 @@ document.addEventListener('DOMContentLoaded', function(){
 
 		if(!valid) return;
 
-		// simulate submit
+		const formData = {
+			name: name.value.trim(),
+			email: email.value.trim(),
+			subject: subject.value.trim(),
+			message: message.value.trim()
+		};
+
 		submitBtn.disabled = true;
 		submitBtn.textContent = 'Sending...';
 
-		setTimeout(()=>{
-			submitBtn.disabled = false;
-			submitBtn.textContent = 'Send Message';
+		fetch('/submit', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(formData)
+		})
+		.then(response => {
+			if (!response.ok) throw new Error('Unable to save form data.');
+			return response.json();
+		})
+		.then(() => {
 			form.reset();
 			success.hidden = false;
-			// hide after a few seconds
-			setTimeout(()=> success.hidden = true, 5000);
-		}, 900);
+			setTimeout(() => success.hidden = true, 5000);
+		})
+		.catch(error => {
+			console.error(error);
+			alert('Unable to save form data. Make sure the server is running.');
+		})
+		.finally(() => {
+			submitBtn.disabled = false;
+			submitBtn.textContent = 'Send Message';
+		});
 	});
 });
 
