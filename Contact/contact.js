@@ -1,8 +1,10 @@
-
 document.addEventListener('DOMContentLoaded', function(){
 	const form = document.getElementById('contactForm');
 	const success = document.getElementById('successMessage');
 	const submitBtn = document.getElementById('submitBtn');
+
+	// Replace this with your actual Formspree endpoint for the contact form
+	const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xojgpaln';
 
 	function validateEmail(email){
 		return /^\S+@\S+\.\S+$/.test(email);
@@ -41,23 +43,16 @@ document.addEventListener('DOMContentLoaded', function(){
 
 		if(!valid) return;
 
-		const formData = {
-			name: name.value.trim(),
-			email: email.value.trim(),
-			subject: subject.value.trim(),
-			message: message.value.trim()
-		};
-
 		submitBtn.disabled = true;
 		submitBtn.textContent = 'Sending...';
 
-		fetch('/submit', {
+		fetch(FORMSPREE_ENDPOINT, {
 			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(formData)
+			headers: { 'Accept': 'application/json' },
+			body: new FormData(form)
 		})
 		.then(response => {
-			if (!response.ok) throw new Error('Unable to save form data.');
+			if (!response.ok) throw new Error('Unable to send message.');
 			return response.json();
 		})
 		.then(() => {
@@ -67,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		})
 		.catch(error => {
 			console.error(error);
-			alert('Unable to save form data. Make sure the server is running.');
+			alert('Something went wrong — please try again.');
 		})
 		.finally(() => {
 			submitBtn.disabled = false;
@@ -75,4 +70,3 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	});
 });
-
