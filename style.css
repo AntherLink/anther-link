@@ -209,6 +209,17 @@ header nav{
         flex-direction: column;
         width: 100%;
     }
+
+    .hero,
+    .about,
+    footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .footer-links {
+        gap: var(--space-md);
+    }
 }
 
 body {
@@ -340,4 +351,22 @@ footer {
 .footer-bottom p {
   font-size: 0.85rem;
   color: #9BA394;
+}
+
+/* Mobile overrides - placed last so they win the cascade */
+@media (max-width: 600px) {
+    .hero,
+    .about,
+    footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .footer-links {
+        gap: var(--space-md);
+    }
+
+    .footer-top {
+        gap: var(--space-md);
+    }
 }
