@@ -1,9 +1,36 @@
+:root{
+	--bg: #F6F4EC;
+	--ink: #1C1F1A;
+	--accent: #C4622D;
+	--accent-dark: #2F3B2A;
+	--line: #D8D3C4;
+	--font-display: 'Fraunces', serif;
+	--font-body: 'Inter', sans-serif;
+	--radius: 8px;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+
+body{
+	font-family: var(--font-body);
+	background: var(--bg);
+	color: var(--ink);
+}
+
+/* ---- Nav ---- */
 header nav{
 	display:flex;
 	justify-content:space-between;
 	align-items:center;
 	padding: 1rem 2rem;
 	position: relative;
+}
+
+.logo{
+	font-family: var(--font-display);
+	font-weight:600;
+	font-size:1.3rem;
+	color: var(--ink);
+	text-decoration:none;
 }
 
 .nav-links{
@@ -72,28 +99,15 @@ header nav{
 	}
 }
 
-:root{
-	--bg: #F6F4EC;
-	--ink: #1C1F1A;
-	--accent: #C4622D;
-	--accent-dark: #2F3B2A;
-	--line: #D8D3C4;
-	--font-display: 'Fraunces', serif;
-	--font-body: 'Inter', sans-serif;
-	--radius: 8px;
-}
-*{box-sizing:border-box}
-body{
-	font-family: var(--font-body);
-	margin:0;
-	min-height:100vh;
-	background: var(--bg);
+/* ---- Contact card ---- */
+.contact-page{
+	min-height: calc(100vh - 80px);
 	display:flex;
 	align-items:center;
 	justify-content:center;
 	padding:40px;
-	color: var(--ink);
 }
+
 .contact-card{
 	background:#ffffff;
 	max-width:680px;
@@ -154,7 +168,6 @@ button#submitBtn:disabled{opacity:.6;cursor:default}
 	font-size: 0.95rem;
 }
 @media (max-width:640px){
-	body{padding:24px}
 	.contact-card{padding:24px}
 	.contact-card h1{font-size:1.6rem}
 }
