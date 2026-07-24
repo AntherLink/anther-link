@@ -1,0 +1,28 @@
+
+:root{
+	--bg1:#ffffff;
+	--bg2:#f6f7f0;
+	--card:#ffffff;
+	--accent:#556b2f; /* dark olive */
+	--muted:#475329;
+	--radius:12px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;min-height:100vh;background:linear-gradient(135deg,var(--bg1),var(--bg2));display:flex;align-items:center;justify-content:center;padding:40px}
+.contact-card{background:var(--card);max-width:680px;width:100%;padding:32px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(17,24,39,0.08);border:1px solid rgba(15,23,42,0.03)}
+.contact-card h1{margin:0 0 6px;font-size:26px;color:#0f172a}
+.lead{margin:0 0 18px;color:var(--muted)}
+.field{display:flex;flex-direction:column;margin-bottom:14px}
+.field label{font-size:13px;color:var(--muted);margin-bottom:6px}
+.field input,.field textarea{background:#ffffff;border:1px solid rgba(15,23,42,0.06);padding:12px 14px;border-radius:8px;font-size:15px;color:#0f172a;outline:none;transition:box-shadow .12s,border-color .12s}
+.field input:focus,.field textarea:focus{box-shadow:0 6px 20px rgba(85,107,47,0.08);border-color:rgba(85,107,47,0.28)}
+.field .error{color:#dc2626;font-size:13px;height:16px;margin-top:6px}
+.actions{display:flex;justify-content:flex-end;margin-top:6px}
+.actions{display:flex;justify-content:flex-end;margin-top:6px}
+button#submitBtn{background:#000;color:#fff;padding:10px 16px;border-radius:10px;border:none;font-weight:600;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.12);transition:transform .12s,box-shadow .12s,background-color .12s}
+button#submitBtn:hover{background:#b95a00;color:#fff}
+button#submitBtn:active{transform:translateY(1px)}
+button#submitBtn:disabled{opacity:.6;cursor:default}
+.success{margin-top:14px;background:#f0f7ec;color:#1f4d2b;padding:12px;border-radius:8px;border:1px solid rgba(31,77,43,0.08)}
+@media (max-width:640px){body{padding:24px}.contact-card{padding:20px}.contact-card h1{font-size:20px}}
+
