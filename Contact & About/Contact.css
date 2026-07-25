@@ -23,6 +23,7 @@ header nav{
 	align-items:center;
 	padding: 1rem 2rem;
 	position: relative;
+	z-index: 100;
 }
 
 .logo{
@@ -89,6 +90,7 @@ header nav{
 		padding: 1rem 2rem;
 		border-bottom:1px solid var(--line);
 		display:none;
+		z-index: 100;
 	}
 	.nav-links.open{
 		display:flex;
