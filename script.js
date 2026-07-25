@@ -1,6 +1,6 @@
 const form = document.getElementById('waitlist-form');
 
-form.addEventListener('submit', async function(e) {
+form.addEventListener('submit', async function (e) {
   e.preventDefault();
 
   const response = await fetch('https://formspree.io/f/xdaqwwjy', {
