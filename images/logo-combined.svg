@@ -1,0 +1,14 @@
+<svg width="440" height="100" viewBox="0 0 440 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- icon, scaled down and repositioned -->
+  <g transform="translate(10, 10) scale(0.4)">
+    <line x1="100" y1="60" x2="60" y2="120" stroke="#1C1F1A" stroke-width="5"/>
+    <line x1="100" y1="60" x2="140" y2="120" stroke="#1C1F1A" stroke-width="5"/>
+    <line x1="60" y1="120" x2="140" y2="120" stroke="#1C1F1A" stroke-width="5"/>
+    <line x1="100" y1="60" x2="100" y2="100" stroke="#1C1F1A" stroke-width="5"/>
+    <circle cx="100" cy="60" r="16" fill="#C4622D"/>
+    <circle cx="60" cy="120" r="16" fill="#2F3B2A"/>
+    <circle cx="140" cy="120" r="16" fill="#2F3B2A"/>
+    <circle cx="100" cy="100" r="10" fill="#C4622D"/>
+  </g>
+  <text x="100" y="62" font-family="Fraunces, Georgia, serif" font-size="38" font-weight="600" fill="#1C1F1A">Anther<tspan fill="#C4622D">Link</tspan></text>
+</svg>

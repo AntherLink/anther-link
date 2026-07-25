@@ -30,11 +30,14 @@ header nav{
 }
 
 .logo{
-	font-family: var(--font-display);
-	font-weight:600;
-	font-size:1.3rem;
-	color: var(--ink);
+	display: block;
 	text-decoration: none;
+}
+
+.logo-img{
+	height: 32px;
+	width: auto;
+	display: block;
 }
 
 .nav-links{
