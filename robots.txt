@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://antherlink.com/sitemap.xml
+Sitemap: https://anther-link.vercel.app/sitemap.xml
