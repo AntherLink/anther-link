@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 :root {
     --bg: #F6F4EC;
     --ink: #1C1F1A;
@@ -15,9 +19,29 @@
     --space-sm: 0.5rem;
     --space-md: 1.5rem;
     --space-lg: 4rem;
-    --space-xl: 8rem;
+    --space-xl: 6rem;
 }
 
+body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.container{
+	width: min(1200px, 90%);
+	margin: 0 auto;
+}
+
+/* ---- Nav ---- */
 header nav{
 	display:flex;
 	justify-content:space-between;
@@ -104,13 +128,14 @@ header nav{
 		border-bottom:none;
 	}
 }
+
+/* ---- Hero ---- */
 .hero {
-    min-height: 90vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: var(--space-lg) var(--space-xl);
     position: relative;
     overflow: hidden;
 }
@@ -147,8 +172,16 @@ header nav{
 
 #waitlist-form input {
     padding: 0.75rem 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--line);
     border-radius: 6px;
+    font-family: var(--font-body);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+#waitlist-form input:focus{
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(196,98,45,.12);
 }
 
 #waitlist-form button {
@@ -156,16 +189,17 @@ header nav{
     background: var(--ink);
     color: var(--bg);
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     font-family: var(--font-body);
     font-weight: 500;
     cursor: pointer;
-    transition: transform 0.15s ease, background 0.15s ease;
+    transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
 }
 
 #waitlist-form button:hover {
     background: var(--accent);
     transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
 }
 
 #waitlist-form button:active {
@@ -203,16 +237,18 @@ header nav{
     animation-delay: 0.3s;
 }
 
-body {
-    font-family: var(--font-body);
-    background: var(--bg);
-    color: var(--ink);
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    #waitlist-form {
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
-.about {
-  padding: var(--space-xl) var(--space-xl);
-}
-
+/* ---- Shared section labels ---- */
 .section-eyebrow {
   font-size: 0.85rem;
   letter-spacing: 0.15em;
@@ -220,6 +256,11 @@ body {
   color: var(--accent);
   display: block;
   margin-bottom: var(--space-sm);
+}
+
+/* ---- Services ---- */
+.about {
+  padding: var(--space-xl) 0;
 }
 
 .about h2 {
@@ -239,12 +280,13 @@ body {
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: var(--space-md);
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .service-card:hover {
   border-color: var(--accent);
   transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.06);
 }
 
 .service-icon {
@@ -265,11 +307,12 @@ body {
   color: #4A4E44;
 }
 
+/* ---- Why Us ---- */
 .why-us{
 	background: #ffffff;
 	border-top: 1px solid var(--line);
 	border-bottom: 1px solid var(--line);
-	padding: var(--space-xl) var(--space-xl);
+	padding: var(--space-xl) 0;
 }
 
 .why-us h2{
@@ -287,6 +330,13 @@ body {
 
 .why-card{
 	padding: var(--space-md);
+	border-radius: 8px;
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.why-card:hover{
+	transform: translateY(-4px);
+	box-shadow: 0 18px 40px rgba(0,0,0,.06);
 }
 
 .why-icon{
@@ -307,8 +357,9 @@ body {
 	color: #4A4E44;
 }
 
+/* ---- Process ---- */
 .process{
-	padding: var(--space-xl) var(--space-xl);
+	padding: var(--space-xl) 0;
 }
 
 .process h2{
@@ -366,8 +417,9 @@ body {
 	}
 }
 
+/* ---- Founders ---- */
 .founders{
-	padding: var(--space-xl) var(--space-xl);
+	padding: var(--space-xl) 0;
 	text-align: center;
 }
 
@@ -413,10 +465,11 @@ body {
 	border-color: var(--accent);
 }
 
+/* ---- Final CTA ---- */
 .final-cta{
 	background: var(--accent-dark);
 	color: var(--bg);
-	padding: var(--space-xl) var(--space-xl);
+	padding: var(--space-xl) 0;
 	text-align: center;
 }
 
@@ -440,26 +493,29 @@ body {
 	color: var(--ink);
 	text-decoration: none;
 	padding: 0.9rem 1.75rem;
-	border-radius: 4px;
+	border-radius: 8px;
 	font-weight: 500;
-	transition: transform .15s ease, background .15s ease;
+	transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
 }
 
 .final-cta .cta-button:hover{
 	background: var(--accent);
 	color: #ffffff;
 	transform: translateY(-2px);
+	box-shadow: 0 10px 25px rgba(0,0,0,.15);
 }
 
+/* ---- Footer ---- */
 footer {
   background: var(--ink);
   color: var(--bg);
-  padding: var(--space-lg) var(--space-xl) var(--space-md);
+  padding: var(--space-lg) 0 var(--space-md);
 }
 
 .footer-top {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: var(--space-lg);
   padding-bottom: var(--space-lg);
@@ -519,28 +575,8 @@ footer {
   color: #9BA394;
 }
 
-/* Mobile overrides - placed last so they win the cascade */
+/* ---- Mobile: things the container % width doesn't already handle ---- */
 @media (max-width: 600px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    #waitlist-form {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .hero,
-    .about,
-    .why-us,
-    .process,
-    .founders,
-    .final-cta,
-    footer {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-
     .footer-links {
         gap: var(--space-md);
     }
@@ -548,4 +584,13 @@ footer {
     .footer-top {
         gap: var(--space-md);
     }
+}
+
+/* ---- Respect reduced motion preference ---- */
+@media (prefers-reduced-motion: reduce){
+	*{
+		animation: none !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
 }
