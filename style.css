@@ -14,12 +14,17 @@ html{
     --accent: #C4622D;
     --accent-dark: #2F3B2A;
     --line: #D8D3C4;
+    --muted: #4A4E44;
+    --muted-light: #C9D0C4;
+    --muted-lighter: #9BA394;
     --font-display: 'Fraunces', serif;
     --font-body: 'Inter', sans-serif;
     --space-sm: 0.5rem;
     --space-md: 1.5rem;
     --space-lg: 4rem;
     --space-xl: 6rem;
+    --transition-fast: .15s ease;
+    --transition-normal: .25s ease;
 }
 
 body {
@@ -73,7 +78,7 @@ header nav{
 	color: var(--ink);
 	font-weight:500;
 	font-size:0.95rem;
-	transition: color .15s ease;
+	transition: color var(--transition-fast);
 }
 
 .nav-links a:hover{
@@ -161,7 +166,7 @@ header nav{
 .hero p {
     font-size: 1.15rem;
     max-width: 42ch;
-    color: #4A4E44;
+    color: var(--muted);
     margin-bottom: var(--space-lg);
 }
 
@@ -175,7 +180,7 @@ header nav{
     border: 1px solid var(--line);
     border-radius: 6px;
     font-family: var(--font-body);
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 #waitlist-form input:focus{
@@ -193,7 +198,7 @@ header nav{
     font-family: var(--font-body);
     font-weight: 500;
     cursor: pointer;
-    transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+    transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 #waitlist-form button:hover {
@@ -280,7 +285,7 @@ header nav{
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: var(--space-md);
-  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .service-card:hover {
@@ -304,7 +309,7 @@ header nav{
 
 .service-card p {
   font-size: 0.95rem;
-  color: #4A4E44;
+  color: var(--muted);
 }
 
 /* ---- Why Us ---- */
@@ -331,7 +336,7 @@ header nav{
 .why-card{
 	padding: var(--space-md);
 	border-radius: 8px;
-	transition: box-shadow 0.2s ease, transform 0.2s ease;
+	transition: box-shadow var(--transition-normal), transform var(--transition-normal);
 }
 
 .why-card:hover{
@@ -354,7 +359,7 @@ header nav{
 
 .why-card p{
 	font-size: 0.95rem;
-	color: #4A4E44;
+	color: var(--muted);
 }
 
 /* ---- Process ---- */
@@ -397,7 +402,7 @@ header nav{
 
 .process-step p{
 	font-size: 0.9rem;
-	color: #4A4E44;
+	color: var(--muted);
 }
 
 .step-connector{
@@ -457,7 +462,7 @@ header nav{
 	text-decoration: none;
 	border-bottom: 1px solid var(--ink);
 	padding-bottom: 2px;
-	transition: color .15s ease, border-color .15s ease;
+	transition: color var(--transition-fast), border-color var(--transition-fast);
 }
 
 .founders-link:hover{
@@ -484,7 +489,7 @@ header nav{
 .final-cta p{
 	max-width: 42ch;
 	margin: 0 auto var(--space-lg);
-	color: #C9D0C4;
+	color: var(--muted-light);
 }
 
 .final-cta .cta-button{
@@ -495,7 +500,7 @@ header nav{
 	padding: 0.9rem 1.75rem;
 	border-radius: 8px;
 	font-weight: 500;
-	transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+	transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .final-cta .cta-button:hover{
@@ -530,7 +535,7 @@ footer {
 }
 
 .footer-brand p {
-  color: #C9D0C4;
+  color: var(--muted-light);
   max-width: 30ch;
 }
 
@@ -554,10 +559,10 @@ footer {
 }
 
 .footer-col a {
-  color: #C9D0C4;
+  color: var(--muted-light);
   text-decoration: none;
   font-size: 0.95rem;
-  transition: color 0.15s ease;
+  transition: color var(--transition-fast);
 }
 
 .footer-col a:hover {
@@ -572,7 +577,7 @@ footer {
 
 .footer-bottom p {
   font-size: 0.85rem;
-  color: #9BA394;
+  color: var(--muted-lighter);
 }
 
 /* ---- Mobile: things the container % width doesn't already handle ---- */
