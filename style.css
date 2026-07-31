@@ -19,15 +19,12 @@ html{
     --muted-lighter: #9BA394;
     --font-display: 'Fraunces', serif;
     --font-body: 'Inter', sans-serif;
-    --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1.5rem;
     --space-lg: 4rem;
     --space-xl: 6rem;
-    --space-2xl: 8rem;
     --transition-fast: .15s ease;
     --transition-normal: .25s ease;
-    --radius: 8px;
 }
 
 body {
@@ -45,9 +42,8 @@ img{
 }
 
 .container{
-	max-width: 1200px;
+	width: min(1200px, 90%);
 	margin: 0 auto;
-	padding: 0 1.5rem;
 }
 
 /* ---- Nav ---- */
@@ -182,7 +178,7 @@ header nav{
 #waitlist-form input {
     padding: 0.75rem 1rem;
     border: 1px solid var(--line);
-    border-radius: var(--radius);
+    border-radius: 6px;
     font-family: var(--font-body);
     transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
@@ -198,7 +194,7 @@ header nav{
     background: var(--ink);
     color: var(--bg);
     border: none;
-    border-radius: var(--radius);
+    border-radius: 8px;
     font-family: var(--font-body);
     font-weight: 500;
     cursor: pointer;
@@ -287,7 +283,7 @@ header nav{
 
 .service-card {
   border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: 6px;
   padding: var(--space-md);
   transition: border-color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
 }
@@ -339,7 +335,7 @@ header nav{
 
 .why-card{
 	padding: var(--space-md);
-	border-radius: var(--radius);
+	border-radius: 8px;
 	transition: box-shadow var(--transition-normal), transform var(--transition-normal);
 }
 
@@ -502,7 +498,7 @@ header nav{
 	color: var(--ink);
 	text-decoration: none;
 	padding: 0.9rem 1.75rem;
-	border-radius: var(--radius);
+	border-radius: 8px;
 	font-weight: 500;
 	transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
 }
