@@ -19,10 +19,12 @@ html{
     --muted-lighter: #9BA394;
     --font-display: 'Fraunces', serif;
     --font-body: 'Inter', sans-serif;
+    --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1.5rem;
     --space-lg: 4rem;
     --space-xl: 6rem;
+    --space-2xl: 8rem;
     --transition-fast: .15s ease;
     --transition-normal: .25s ease;
     --radius: 8px;
