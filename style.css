@@ -196,30 +196,12 @@ header .container{
     margin-bottom: var(--space-lg);
 }
 
-#waitlist-form {
-    display: flex;
-    gap: 0.5rem;
-}
-
-#waitlist-form input {
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    font-family: var(--font-body);
-    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-#waitlist-form input:focus{
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 4px rgba(196,98,45,.12);
-}
-
-#waitlist-form button {
+.hero-cta {
+    display: inline-block;
     padding: 0.9rem 1.75rem;
     background: var(--ink);
     color: var(--bg);
-    border: none;
+    text-decoration: none;
     border-radius: var(--radius);
     font-family: var(--font-body);
     font-weight: 500;
@@ -227,13 +209,13 @@ header .container{
     transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-#waitlist-form button:hover {
+.hero-cta:hover {
     background: var(--accent);
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(0,0,0,.08);
 }
 
-#waitlist-form button:active {
+.hero-cta:active {
     transform: translateY(0);
 }
 
@@ -252,7 +234,7 @@ header .container{
 .hero-eyebrow,
 .hero h1,
 .hero p,
-#waitlist-form {
+.hero-cta {
     animation: fadeUp 0.7s ease backwards;
 }
 
@@ -264,18 +246,13 @@ header .container{
     animation-delay: 0.2s;
 }
 
-#waitlist-form {
+.hero-cta {
     animation-delay: 0.3s;
 }
 
 @media (max-width: 600px) {
     .hero h1 {
         font-size: 2rem;
-    }
-
-    #waitlist-form {
-        flex-direction: column;
-        width: 100%;
     }
 }
 
