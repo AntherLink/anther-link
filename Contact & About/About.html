@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About — Anther Link</title>
-    
-        <meta name="description" content="Helping ambitious businesses grow through AI automation, full-stack development, and modern web design. We build fast, scalable digital experiences designed for growth.">
+
+    <meta name="description"
+        content="Helping ambitious businesses grow through AI automation, full-stack development, and modern web design. We build fast, scalable digital experiences designed for growth.">
 
     <meta property="og:title" content="Anther Link">
     <meta property="og:description" content="Helping ambitious businesses grow through AI, web development and design.">
@@ -25,29 +26,33 @@
 <body>
     <header>
         <nav>
-            <a href="../index.html" class="logo">
-                <img src="../images/logo-combined.svg" alt="AntherLink logo" class="logo-img">
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
+            <div class="container">
+                <a href="../index.html" class="logo">
+                    <img src="../images/logo-combined.svg" alt="AntherLink logo" class="logo-img">
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main>
         <section class="about-hero">
-            <span class="hero-eyebrow">Who we are</span>
-            <h1>Two friends, one ambition.</h1>
+            <div class="container">
+                <span class="hero-eyebrow">Who we are</span>
+                <h1>Two friends, one ambition.</h1>
+            </div>
         </section>
 
-        <section class="story-block">
+        <section class="story-block container">
             <span class="section-eyebrow">Our Story</span>
-            <p>Anther Links started with two friends who grew up without shortcuts. No inherited network, no funding to
+            <p>Anther Link started with two friends who grew up without shortcuts. No inherited network, no funding to
                 fall back on — just an idea, a stubborn refusal to settle for average, and the belief that we could
                 build something worth building.</p>
             <p>We started this company because we were tired of watching good ideas die from bad execution — clunky
@@ -55,7 +60,7 @@
                 businesses could hand a real problem to and trust it'd come back solved right.</p>
         </section>
 
-        <section class="story-block">
+        <section class="story-block container">
             <span class="section-eyebrow">Our Mission</span>
             <p>To give growing businesses the same quality of development, design, and automation that used to be
                 reserved for companies with much deeper pockets — without the bloated agency price tag or the endless
@@ -64,38 +69,42 @@
         </section>
 
         <section class="about-cta">
-            <h2>Want to build something with us?</h2>
-            <a href="Contact.html" class="cta-button">Get in touch</a>
+            <div class="container">
+                <h2>Want to build something with us?</h2>
+                <a href="Contact.html" class="cta-button">Get in touch</a>
+            </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-top">
-            <div class="footer-brand">
-                <span class="footer-logo">Anther Links</span>
-                <p>Building the connections that matter.</p>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-logo">Anther Link</span>
+                    <p>Building digital experiences people remember.</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <span class="footer-heading">Company</span>
+                        <a href="About.html">About</a>
+                        <a href="Contact.html">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <span class="footer-heading">Follow</span>
+                        <a href="https://x.com/AntherLink" target="_blank">Twitter / X</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="footer-links">
-                <div class="footer-col">
-                    <span class="footer-heading">Company</span>
-                    <a href="About.html">About</a>
-                    <a href="Contact.html">Contact</a>
-                </div>
-                <div class="footer-col">
-                    <span class="footer-heading">Follow</span>
-                    <a href="https://x.com/AntherLink" target="_blank">Twitter / X</a>
-                    <a href="#">LinkedIn</a>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Anther Link. All rights reserved.</p>
             </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 Anther Links. All rights reserved.</p>
         </div>
     </footer>
+
     <script src="nav.js"></script>
-    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 </body>
 
 </html>
